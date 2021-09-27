@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "body-movin"
+    }
+  },
+  "defaultProject": "body-movin",
+  "cli": {
+    "analytics": "5508b773-3f8b-4100-a1bb-ce8c4b740c48"
+  }
 }
