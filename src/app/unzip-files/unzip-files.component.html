@@ -1,1 +1,84 @@
-<p>unzip-files works!</p>
+
+
+<div class="container jumbotron">
+  <div class="row">
+    <div class="col-6 border-right">
+      <div class = "form">
+        <form>
+          <div >
+            <h1 class="text-primary ml-2">Upload graphic</h1>
+            <br/>
+            <input type="file" class="ml-4" (change)="fileChanged($event)">
+            <div class="col-9 mt-4">
+              <hr Style="background-color:gray"/>
+            </div>
+          </div>
+          <div >
+            <h1 class="text-primary ml-2">Replacments </h1>
+            <br/>
+            <div *ngFor = "let i of arrayOfTexts" class="ml-4">
+              <input type="checkbox" >
+              <label class="ml-2">{{i}}</label>
+            </div>
+
+            <div class="col-9 mt-4">
+              <hr Style="background-color:gray"/>
+            </div>
+          </div>
+          <div >
+            <h1 class="text-primary ml-2">Actions </h1>
+            <br/>
+            <div class="ml-4">
+              <input type="checkbox" >
+              <label class="ml-2">Reverse Text</label>
+            </div>
+            <div class="ml-4">
+              <input type="checkbox" >
+              <label class="ml-2">Change Background</label>
+            </div>
+            <div class="ml-4">
+              <input type="checkbox" >
+              <label class="ml-2">Break line</label>
+              <br/>
+              <label class="ml-5">please choose the replacement you want to apply this for :-</label>
+              <div class="row ml-5">
+                <div class="ml-4">
+                  <input type="checkbox" >
+                  <label class="ml-2">Text1</label>
+                </div>
+                <div class="ml-4">
+                  <input class="ml-3" type="checkbox" >
+                  <label class="ml-2">Text2 </label>
+                </div>
+
+              </div>
+            </div>
+            <div class="ml-4 mt-2">
+              <input type="checkbox" >
+              <label class="ml-2">Reduce Font size</label>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+    <div class="col-6">
+      <h1 class="text-primary ml-2">Preview</h1>
+      <div class="ml-3 mt-4" style="height: 70%;width: 100%;">
+        <div *ngIf="isLoaded" [innerHtml]="myHtmlProperty" style="border: 1px solid black; height:max-content;height: 100%;width: inherit; "></div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="mt-5">
+          <button class="mr-4">Export GFX </button>
+          <button class="ml-4"> Preview Gfx</button>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
